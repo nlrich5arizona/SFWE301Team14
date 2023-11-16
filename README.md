@@ -2,6 +2,22 @@
 
 ## Information
 
-Necessary Fields for a profile
+Necessary Fields for an applicant profile
 - Name
+- Gender
 - GPA
+- Year of Study
+- Major
+- Minor (if applicable)
+- Transfer Student (yes/no)
+- Student ID
+- Email
+- Units Enrolled In
+- Citizenship
+- Expected Graduation Date
+- Personal Statement
+- Already have funding (yes/no)
+- Clubs
+- Extracurriculars
+- Academic Achievements
+- Essay Responses
