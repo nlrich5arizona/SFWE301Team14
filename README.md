@@ -21,3 +21,12 @@ Necessary Fields for an applicant profile
 - Extracurriculars
 - Academic Achievements
 - Essay Responses
+
+Necessary Fields for a scholarship
+- Name
+- Monetary Amount
+- Number of recipients
+- Preferred major(s)
+- Minimum GPA
+- Application due date
+- Require Essay
