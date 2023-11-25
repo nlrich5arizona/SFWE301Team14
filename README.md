@@ -20,7 +20,7 @@ Necessary Fields for an applicant profile
 - Clubs
 - Extracurriculars
 - Academic Achievements
-- Essay Responses
+- Essay Responses (Will be attached as files)
 
 Necessary Fields for a scholarship
 - Name

@@ -1,0 +1,17 @@
+Name: James Chen
+Gender: Male
+GPA: 3.8
+Year_of_Study: Junior
+Major: Public Health
+Minor: -
+Transfer_Student: Yes
+Student_ID: 23254410
+Email: jchen3@arizona.edu
+Units_Enrolled_In: 12
+Citizenship: No
+Expected_Graduation_Date: December 2025
+Already_have_funding: No
+Personal_Statement: Passionate about the intersection of health and community, I am pursuing a major in public health to address systemic health disparities. My academic journey is grounded in a commitment to promoting well-being on a global scale. This scholarship is pivotal in enabling me to acquire the knowledge and skills needed to effect positive change. With a focus on preventive measures and health equity, I aspire to contribute to creating healthier communities and fostering a future where everyone has equal access to well-being.
+Clubs: -
+Extracurriculars: Gaming, Reading
+Academic_Achievements: -
