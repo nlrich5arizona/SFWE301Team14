@@ -1,0 +1,7 @@
+Name: Wildcat Engineer's Scholarship
+Monetary_Amount: 5000
+Number_of_recipients: 1
+Preferred_majors: Engineering
+Minimum_GPA: 3.0
+Application_due_date: September 1
+Require_Essay: No

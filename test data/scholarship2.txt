@@ -1,0 +1,7 @@
+Name: Enivornment Defense Fund Scholarship
+Monetary_Amount: 2000
+Number_of_recipients: 2
+Preferred_majors: Environmental Science, Environmental Engineering
+Minimum_GPA: 3.0
+Application_due_date: September 1
+Require_Essay: Yes
