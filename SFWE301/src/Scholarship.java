@@ -1,44 +1,77 @@
+import java.util.Date;
+
 public class Scholarship {
-    String scholarship_description;
-    String scholarship_name;
-    int position_available;
+    String Name;
+    int Monetary_Amount;
+    int No_of_Recipient;
+    String Preferred_Major;
+    double Minimum_GPA;
+    Date Application_due_date;
+    String Require_Essay;
 
-    public Scholarship(String scholarship_description, String scholarship_name, int position_available) {
-        this.scholarship_description = scholarship_description;
-        this.scholarship_name = scholarship_name;
-        this.position_available = position_available;
+    public Scholarship(String name, int monetary_Amount, int no_of_Recipient, String preferred_Major, double minimum_GPA, Date application_due_date, String require_Essay) {
+        Name = name;
+        Monetary_Amount = monetary_Amount;
+        No_of_Recipient = no_of_Recipient;
+        Preferred_Major = preferred_Major;
+        Minimum_GPA = minimum_GPA;
+        Application_due_date = application_due_date;
+        Require_Essay = require_Essay;
     }
 
-    public String getScholarship_description() {
-        return scholarship_description;
+    public String getName() {
+        return Name;
     }
 
-    public void setScholarship_description(String scholarship_description) {
-        this.scholarship_description = scholarship_description;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getScholarship_name() {
-        return scholarship_name;
+    public int getMonetary_Amount() {
+        return Monetary_Amount;
     }
 
-    public void setScholarship_name(String scholarship_name) {
-        this.scholarship_name = scholarship_name;
+    public void setMonetary_Amount(int monetary_Amount) {
+        Monetary_Amount = monetary_Amount;
     }
 
-    public int getPosition_available() {
-        return position_available;
+    public int getNo_of_Recipient() {
+        return No_of_Recipient;
     }
 
-    public void setPosition_available(int position_available) {
-        this.position_available = position_available;
+    public void setNo_of_Recipient(int no_of_Recipient) {
+        No_of_Recipient = no_of_Recipient;
     }
 
-    @Override
-    public String toString() {
-        return "Scholarship{" +
-                "scholarship_description='" + scholarship_description + '\'' +
-                ", scholarship_name='" + scholarship_name + '\'' +
-                ", position_available=" + position_available +
-                '}';
+    public String getPreferred_Major() {
+        return Preferred_Major;
+    }
+
+    public void setPreferred_Major(String preferred_Major) {
+        Preferred_Major = preferred_Major;
+    }
+
+    public double getMinimum_GPA() {
+        return Minimum_GPA;
+    }
+
+    public void setMinimum_GPA(double minimum_GPA) {
+        Minimum_GPA = minimum_GPA;
+    }
+
+    public Date getApplication_due_date() {
+        return Application_due_date;
+    }
+
+    public void setApplication_due_date(Date application_due_date) {
+        Application_due_date = application_due_date;
+    }
+
+    public String getRequire_Essay() {
+        return Require_Essay;
+    }
+
+    public void setRequire_Essay(String require_Essay) {
+        Require_Essay = require_Essay;
     }
 }
