@@ -1,0 +1,7 @@
+Name: Wildcat Transfer Grant
+Monetary_Amount: 5000
+Number_of_recipients: 3
+Preferred_majors: -
+Minimum_GPA: 2.5
+Application_due_date: August 25
+Require_Essay: Yes
