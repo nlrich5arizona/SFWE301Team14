@@ -1,0 +1,17 @@
+Name: Emily Rodriguez
+Gender: Female
+GPA: 3.5
+Year_of_Study: Freshman
+Major: Aerospace Engineering
+Minor: Spanish Language and Culture
+Transfer_Student: No
+Student_ID: 34802510
+Email: erod2005@arizona.edu
+Units_Enrolled_In: 15
+Citizenship: Yes
+Expected_Graduation_Date: May 2027
+Already_have_funding: No
+Personal_Statement: Dedicated to propelling innovation in aerospace engineering, my journey is defined by a fusion of technical prowess and cultural enrichment. As an active member of Latino clubs, I bring diversity and a unique perspective to the field. This scholarship would not only propel my academic ambitions but also amplify the representation of underrepresented voices in the aerospace industry. I am driven to bridge the gap between cultures and contribute to the next frontier of aerospace advancements.
+Clubs: Society of Hispanic Professional Engineers
+Extracurriculars: Volunteering
+Academic_Achievements: -
