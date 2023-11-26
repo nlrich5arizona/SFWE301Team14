@@ -1,0 +1,17 @@
+Name: James Smith
+Gender: Male
+GPA: 3.4
+Year_of_Study: Freshman
+Major: Environmental Science
+Minor: N/A
+Transfer_Student: No
+Student_ID: 24539203
+Email: jsmith320@arizona.edu
+Units_Enrolled_In: 15
+Citizenship: Yes
+Expected_Graduation_Date: May 2027
+Already_have_funding: No
+Personal_Statement: My name is James Smith, and I am a freshman in the Environmental Science department. Passionate about the environment, I am pursuing an environmental science major to deepen my understanding of our planet's intricacies. With a commitment to sustainability, I aspire to contribute innovative solutions to pressing environmental challenges. Any scholarship would enable me to further my education and amplify my impact, fostering a greener, more resilient future.
+Clubs: Arizona Cycling Club, Environmental Science Club
+Extracurriculars: Cycling, Volunteering
+Academic_Achievements: N/A

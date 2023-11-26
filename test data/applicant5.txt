@@ -1,0 +1,17 @@
+Name: Olivia Thompson
+Gender: Female
+GPA: 3.0
+Year_of_Study: Senior
+Major: Creative Writing
+Minor: Environmental Studies
+Transfer_Student: No
+Student_ID: 22562057
+Email: oliviat402@arizona.edu
+Units_Enrolled_In: 15
+Citizenship: Yes
+Expected_Graduation_Date: May 2024
+Already_have_funding: Yes
+Personal_Statement: In the realm of storytelling and expression, my journey as a senior in the creative writing major is a testament to the power of words. Throughout my academic pursuit, I've honed my craft, crafting narratives that resonate and provoke thought. This scholarship is not just a recognition of my dedication but an investment in the potential of narratives to inspire change. As I approach graduation, I am poised to embark on a journey where every word becomes a brushstroke, painting a world that captivates and evokes emotion.
+Clubs: Creative Writing Club
+Extracurriculars: -
+Academic_Achievements: Wildcat Merit Scholarship

@@ -1,0 +1,17 @@
+Name: Jane Johnson
+Gender: Female
+GPA: 4.0
+Year_of_Study: Sophomore
+Major: Business
+Minor: Dance
+Transfer_Student: No
+Student_ID: 29204033
+Email: janesmith4042@arizona.edu
+Units_Enrolled_In: 17
+Citizenship: Yes
+Expected_Graduation_Date: May 2026
+Already_have_funding: Yes
+Personal_Statement: Driven by a fervor for the dynamic world of business, I am committed to pursuing a business major to harness strategic thinking and entrepreneurial spirit. This scholarship opportunity is pivotal in realizing my academic aspirations, equipping me to navigate the complexities of the business realm. I aspire to leverage this education to drive positive change and contribute meaningfully to the ever-evolving landscape of commerce.
+Clubs: DECA, Arizona Dance Club
+Extracurriculars: Dance
+Academic_Achievements: National Merit Scholar, Wildcat Merit Scholarship

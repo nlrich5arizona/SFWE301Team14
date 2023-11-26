@@ -1,0 +1,7 @@
+Name: Latino/Hispanic Society Scholarship
+Monetary_Amount: 5000
+Number_of_recipients: 3
+Preferred_majors: Spanish Language, Latino Studies, Hispanic Studies
+Minimum_GPA: 2.75
+Application_due_date: August 15
+Require_Essay: Yes

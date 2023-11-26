@@ -1,0 +1,7 @@
+Name: Writer's Association Scholarship
+Monetary_Amount: 1000
+Number_of_recipients: 1
+Preferred_majors: Creative Writing, English
+Minimum_GPA: 2.5
+Application_due_date: September 15
+Require_Essay: Yes
