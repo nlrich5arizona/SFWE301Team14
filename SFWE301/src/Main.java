@@ -1,4 +1,9 @@
 import java.util.Scanner;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +31,9 @@ public class Main {
         criteriaWeights.put("Year_of_Study", 10.0);
 
         // Creating a scholarship instance
-        Scholarship scholarship = new Scholarship("Wildcat Engineer's Scholarship", 5000, 1, "Engineering", 3.0, new Date(), "No", criteriaWeights);
+        Scholarship scholarship = new Scholarship("Wildcat Engineer's Scholarship", 5000, 1, "Engineering", 3.0, new Date(), "No", 3, criteriaWeights);
+        Applicant[] applicants = new Applicant[1];
+        applicants[0] = new Applicant("John Doe", "Male", 3.5, 0, "Engineering", false, 2, "johndoe@arizona.edu", "US", new Date());
 
         // Calculate and display matching scores for each applicant
         List<String> matchingScores = ScholarshipMatcher.getMatchingScores(applicants, scholarship);
