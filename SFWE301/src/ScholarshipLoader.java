@@ -58,12 +58,12 @@ public class ScholarshipLoader {
             }
         } 
         
-        // Handle or log NumberFormatException for parsing integer and double values
+        // Handle NumberFormatException for parsing int, double
         catch (NumberFormatException e) {
             throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
         } 
         
-        // Handle or log ParseException for parsing date values
+        // Handle ParseException for parsing date
         catch (ParseException e) {
             throw new ParseException("Failed to parse date values in the file: " + filePath, 0);
         }
