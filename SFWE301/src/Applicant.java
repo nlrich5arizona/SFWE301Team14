@@ -1,5 +1,3 @@
-//import java.util.Date;
-
 public class Applicant {
     String Name;
     String Gender;

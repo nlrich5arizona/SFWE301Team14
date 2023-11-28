@@ -1,11 +1,7 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
-//import java.text.SimpleDateFormat;
-//import java.util.Date;
 
 public class ApplicantLoader {
 
@@ -29,11 +25,8 @@ public class ApplicantLoader {
         String Extracurriculars = "";
         String Academic_Achievement = "";
 
-        // Set date format
-        //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
-
-        // Read file
         try {
+            // Read file
             Scanner scanner = new Scanner(new File(filePath));
             // To hold a line at a time
             String line;
@@ -123,14 +116,8 @@ public class ApplicantLoader {
         catch (NumberFormatException e) {
             throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
         }
-        
-        /*
-        // Handle or log ParseException for parsing date
-        catch (ParseException e) {
-            throw new ParseException("Failed to parse date values in the file: " + filePath, 0);
-        }
-        */
 
+        // Creating the object given the information
         Applicant applicant = new Applicant(Name, Gender, GPA, Year_of_Study, Major, Transfer_Student, Student_ID, Email, Citizenship, Expected_Graduation_Date);
         applicant.setUnits_enrolled(units_enrolled);
         applicant.setPersonal_Statement(Personal_Statement);

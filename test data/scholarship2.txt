@@ -1,4 +1,4 @@
-Name: Enivornment Defense Fund Scholarship
+Name: Environment Defense Fund Scholarship
 Monetary_Amount: 2000
 Number_of_recipients: 2
 Preferred_majors: Environmental Science, Environmental Engineering

@@ -1,8 +1,6 @@
 import java.util.Scanner;
 import java.util.Map;
-//import java.util.ArrayList;
 import java.util.List;
-//import java.util.Date;
 import java.util.HashMap;
 
 public class Main {
@@ -28,19 +26,19 @@ public class Main {
                 System.out.println("Error parsing on count " + i);
             }
         }
-
-        // Ask user information (login process)
+        
         String isAdminUserSelection;
         int scholarshipResponsibleFor = 0;
         int applicantSelected = 0;
         int userApplicant = 0;
-        Applicant currApplicant;
         Scholarship currScholarship = scholarships[0];
 
         while (!userInput.equals("quit")) {
+            // Ask user for information (login process)
             System.out.println("Is the current user an administrator? (y/n)");
             isAdminUserSelection = scnr.next();
 
+            // Gives the user administrative access based on the previous question
             if (isAdminUserSelection.equals("y")) {
                 currUser.GiveAdmin();
             }
@@ -48,19 +46,21 @@ public class Main {
                 currUser.RevokeAdmin();
             }
 
+            // Split paths based on whether the user is an applicant or an administrator
             if (currUser.getAdmin()) {
+                // Lists all available scholarships
                 System.out.println("Available Scholarships:");
                 for (int i = 0; i < 5; ++i) {
                     System.out.println((i+1) + ". " + scholarships[i].getName());
                 }
 
+                // User selects which scholarship they are responsible for
                 System.out.println();
                 System.out.println("For which scholarship are you responsible?");
 
                 scholarshipResponsibleFor = scnr.nextInt();
                 currScholarship = scholarships[scholarshipResponsibleFor - 1];
 
-                
                 // Criteria weights (e.g., GPA weight: 20, Major weight: 50, Year_of_Study weight: 10)
                 Map<String, Double> criteriaWeights = new HashMap<>();
                 criteriaWeights.put("GPA", 20.0);
@@ -93,12 +93,16 @@ public class Main {
                     awardScholarship = scnr.next();
                 }
                 
+                // Awarding the scholarship
                 System.out.println();
                 System.out.println("Scholarship awarded to " + selectedApplicant.getName());
 
+                // Creating the notification for the applicant
                 applicants[applicantSelected - 1].setHasNotification(true);
                 Notification scholarshipAwardedNotif = new Notification(currScholarship.getName(), applicants[applicantSelected - 1].getName());
                 applicants[applicantSelected - 1].setNotification(scholarshipAwardedNotif);
+
+                // Waits for the user to log out
                 while (!userInput.equals("logout") && !userInput.equals("Logout") && !userInput.equals("quit")) {
                     userInput = scnr.next();
                 }
@@ -106,25 +110,32 @@ public class Main {
             else {
                 userInput = "";
                 String acceptScholarship = "";
+
+                // Lists all applicants
                 System.out.println("Loaded Applicants:");
                 for (int i = 0; i < 5; ++i) {
                     System.out.println((i+1) + ". " + applicants[i].getName());
                 }
 
+                // Asks applicant to identify themselves
                 System.out.println();
                 System.out.println("Which applicant are you?");
 
                 userApplicant = scnr.nextInt();
 
+                // Checks for notification
                 if (applicants[userApplicant - 1].getHasNotification()) {
-                    System.out.println(applicants[userApplicant - 1].getNotification().toString());
-                    System.out.println("Do you accept this scholarship? (y/n)");
+                    System.out.println(applicants[userApplicant - 1].getNotification().toString());     // Prints notification
+                    System.out.println("Do you accept this scholarship? (y/n)");                      // Prompts applicant to accept the notification
                     acceptScholarship = scnr.next();
+
+                    // If applicant accepts, the system writes this to a log
                     if (acceptScholarship.equals("y")) {
                         logWriter.writeAwardToFile(currScholarship.getName(), applicants[userApplicant - 1].getName(), applicants[userApplicant - 1].getStudent_ID(), "log.txt");
                     }
                 }
-
+                
+                // Waits for user to log out
                 while (!userInput.equals("logout") && !userInput.equals("Logout") && !userInput.equals("quit")) {
                     userInput = scnr.next();
                 }

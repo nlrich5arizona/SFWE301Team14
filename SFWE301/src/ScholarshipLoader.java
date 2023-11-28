@@ -1,13 +1,6 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
-/*
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Map;
-*/
 import java.util.Scanner;
 
 public class ScholarshipLoader {
@@ -21,9 +14,6 @@ public class ScholarshipLoader {
         double Minimum_GPA = 0.0;
         String Application_due_date = "";
         boolean Require_Essay = false;
-
-        // Set date format
-        //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d");
 
         // Read file
         try {
@@ -68,20 +58,12 @@ public class ScholarshipLoader {
         
         // Handle NumberFormatException for parsing int, double
         catch (NumberFormatException e) {
-            //throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
             System.out.println("Failed to parse numeric values in the file: " + filePath);
         } 
 
         catch (IOException e) {
             System.out.println("Error with parsing " + filePath);
         }
-        
-        /*
-        // Handle ParseException for parsing date
-        catch (ParseException e) {
-            throw new ParseException("Failed to parse date values in the file: " + filePath, 0);
-        }
-        */
 
         return new Scholarship(Name, Monetary_Amount, No_of_Recipient, Preferred_Major, Minimum_GPA, Application_due_date, Require_Essay, 0);
     }
