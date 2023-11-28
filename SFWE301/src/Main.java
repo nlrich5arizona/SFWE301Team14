@@ -33,12 +33,14 @@ public class Main {
         // Creating a scholarship instance
         Scholarship scholarship = new Scholarship("Wildcat Engineer's Scholarship", 5000, 1, "Engineering", 3.0, new Date(), "No", 3, criteriaWeights);
         Applicant[] applicants = new Applicant[2];
+        /*
         applicants[0] = new Applicant("John Doe", "Male", 3.5, 0, "Engineering", false, 2, "johndoe@arizona.edu", "US", new Date());
         applicants[1] = new Applicant("Jane Doe", "Female", 2.5, 0, "Engineering", false, 2, "johndoe@arizona.edu", "US", new Date());
+        */
 
         // Calculate and display matching scores for each applicant
         int count = 1;
-        List<String> matchingScores = ScholarshipMatcher.getMatchingScores(applicants, scholarship);
+        List<String> matchingScores = ScholarshipMatcher.getMatchingScores(applicants, scholarship, criteriaWeights);
         System.out.println("Applicant Scores for " + scholarship.getName() + ":");
         for (String score : matchingScores) {
             System.out.print(count + ". ");

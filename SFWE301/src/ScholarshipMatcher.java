@@ -4,12 +4,12 @@ import java.util.Map;
 
 public class ScholarshipMatcher {
 
-    public static List<String> getMatchingScores(Applicant[] applicants, Scholarship scholarship) {
+    public static List<String> getMatchingScores(Applicant[] applicants, Scholarship scholarship, Map<String, Double> inputWeights) {
         List<String> scores = new ArrayList<>();
 
         for (Applicant applicant : applicants) {
             double score = 0;
-            Map<String, Double> criteriaWeights = scholarship.getCriteriaWeights();
+            Map<String, Double> criteriaWeights = inputWeights;
             
             // GPA Criteria
             if (criteriaWeights.containsKey("GPA")) {

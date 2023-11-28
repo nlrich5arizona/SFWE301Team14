@@ -2,8 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
+/*
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
+*/
 
 public class ScholarshipLoader {
 
@@ -14,11 +17,11 @@ public class ScholarshipLoader {
         int No_of_Recipient = 0;
         String Preferred_Major = "";
         double Minimum_GPA = 0.0;
-        Date Application_due_date = null;
+        String Application_due_date = "";
         boolean Require_Essay = false;
 
         // Set date format
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d");
+        //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d");
 
         // Read file
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -49,7 +52,7 @@ public class ScholarshipLoader {
                         Minimum_GPA = Double.parseDouble(parts[1].trim());
                         break;
                     case "Application_due_date":
-                        Application_due_date = dateFormat.parse(parts[1].trim()); // Using date format from above
+                        Application_due_date = parts[1].trim();
                         break;
                     case "Require_Essay":
                         Require_Essay = parts[1].trim().equalsIgnoreCase("Yes"); // Assuming only options are Yes/No
@@ -63,11 +66,13 @@ public class ScholarshipLoader {
             throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
         } 
         
+        /*
         // Handle ParseException for parsing date
         catch (ParseException e) {
             throw new ParseException("Failed to parse date values in the file: " + filePath, 0);
         }
+        */
 
-        return new Scholarship(Name, Monetary_Amount, No_of_Recipient, Preferred_Major, Minimum_GPA, Application_due_date, Require_Essay);
+        return new Scholarship(Name, Monetary_Amount, No_of_Recipient, Preferred_Major, Minimum_GPA, Application_due_date, Require_Essay, 0);
     }
 }

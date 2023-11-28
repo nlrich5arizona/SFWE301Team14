@@ -1,5 +1,5 @@
-import java.util.Date;
-import java.util.Map;
+//import java.util.Date;
+//import java.util.Map;
 
 public class Scholarship {
     String Name;
@@ -7,13 +7,13 @@ public class Scholarship {
     int No_of_Recipient;
     String Preferred_Major;
     double Minimum_GPA;
-    Date Application_due_date;
-    String Require_Essay;
+    String Application_due_date;
+    boolean Require_Essay;
     int Preferred_Year_of_Study;
-    Map<String, Double> criteriaWeights; // Key: Criteria Name, Value: Weight
+    //Map<String, Double> criteriaWeights; // Key: Criteria Name, Value: Weight
 
 
-    public Scholarship(String name, int monetary_Amount, int no_of_Recipient, String preferred_Major, double minimum_GPA, Date application_due_date, String require_Essay, int preferred_year_of_study, Map<String, Double> criteriaWeights) {
+    public Scholarship(String name, int monetary_Amount, int no_of_Recipient, String preferred_Major, double minimum_GPA, String application_due_date, boolean require_Essay, int preferred_year_of_study) {
         Name = name;
         Monetary_Amount = monetary_Amount;
         No_of_Recipient = no_of_Recipient;
@@ -22,7 +22,6 @@ public class Scholarship {
         Application_due_date = application_due_date;
         Require_Essay = require_Essay;
         Preferred_Year_of_Study = preferred_year_of_study;
-        this.criteriaWeights = criteriaWeights;
     }
 
     public String getName() {
@@ -65,19 +64,19 @@ public class Scholarship {
         Minimum_GPA = minimum_GPA;
     }
 
-    public Date getApplication_due_date() {
+    public String getApplication_due_date() {
         return Application_due_date;
     }
 
-    public void setApplication_due_date(Date application_due_date) {
+    public void setApplication_due_date(String application_due_date) {
         Application_due_date = application_due_date;
     }
 
-    public String getRequire_Essay() {
+    public boolean getRequire_Essay() {
         return Require_Essay;
     }
 
-    public void setRequire_Essay(String require_Essay) {
+    public void setRequire_Essay(boolean require_Essay) {
         Require_Essay = require_Essay;
     }
 
@@ -89,6 +88,7 @@ public class Scholarship {
         return Preferred_Year_of_Study;
     }
 
+    /*
     public Map<String, Double> getCriteriaWeights() {
         return criteriaWeights;
     }
@@ -96,4 +96,5 @@ public class Scholarship {
     public void setCriteriaWeights(Map<String, Double> criteriaWeights) {
         this.criteriaWeights = criteriaWeights;
     }
+    */
 }

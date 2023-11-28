@@ -11,16 +11,16 @@ public class Applicant {
     int Student_ID;
     String Email;
     int units_enrolled;
-    String Citizenship;
-    Date Expected_Graduation_Date;
+    boolean Citizenship;
+    String Expected_Graduation_Date;
     String Personal_Statement;
     boolean Have_Funding;
     String Club;
     String Extracurriculars;
     String Academic_Achievement;
-    String Easy_Responses;
+    String Essay_Responses;
 
-    public Applicant(String name, String gender, double GPA, int year_of_Study, String major, boolean transfer_Student, int student_ID, String email, String citizenship, Date expected_Graduation_Date) {
+    public Applicant(String name, String gender, double GPA, int year_of_Study, String major, boolean transfer_Student, int student_ID, String email, boolean citizenship, String expected_Graduation_Date) {
         Name = name;
         Gender = gender;
         this.GPA = GPA;
@@ -113,19 +113,19 @@ public class Applicant {
         this.units_enrolled = units_enrolled;
     }
 
-    public String getCitizenship() {
+    public boolean getCitizenship() {
         return Citizenship;
     }
 
-    public void setCitizenship(String citizenship) {
+    public void setCitizenship(boolean citizenship) {
         Citizenship = citizenship;
     }
 
-    public Date getExpected_Graduation_Date() {
+    public String getExpected_Graduation_Date() {
         return Expected_Graduation_Date;
     }
 
-    public void setExpected_Graduation_Date(Date expected_Graduation_Date) {
+    public void setExpected_Graduation_Date(String expected_Graduation_Date) {
         Expected_Graduation_Date = expected_Graduation_Date;
     }
 
@@ -169,11 +169,11 @@ public class Applicant {
         Academic_Achievement = academic_Achievement;
     }
 
-    public String getEasy_Responses() {
-        return Easy_Responses;
+    public String getEssay_Responses() {
+        return Essay_Responses;
     }
 
-    public void setEasy_Responses(String easy_Responses) {
-        Easy_Responses = easy_Responses;
+    public void setEasy_Responses(String essay_Responses) {
+        Essay_Responses = essay_Responses;
     }
 }

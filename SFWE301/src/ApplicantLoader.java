@@ -2,33 +2,33 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 
 public class ApplicantLoader {
 
     public static Applicant loadApplicantData(String filePath) throws IOException, ParseException  {
         // Applicant fields
-        String Name;
-        String Gender;
-        double GPA;
-        int Year_of_Study;
-        String Major;
-        String Minor;
-        boolean Transfer_Student;
-        int Student_ID;
-        String Email;
-        int units_enrolled;
-        String Citizenship;
-        Date Expected_Graduation_Date;
-        String Personal_Statement;
-        boolean Have_Funding;
-        String Club;
-        String Extracurriculars;
-        String Academic_Achievement;
+        String Name = "";
+        String Gender = "";
+        double GPA = 0.0;
+        int Year_of_Study = 0;
+        String Major = "";
+        String Minor = "";
+        boolean Transfer_Student = false;
+        int Student_ID = 0;
+        String Email = "";
+        int units_enrolled = 0;
+        boolean Citizenship = true;
+        String Expected_Graduation_Date = "";
+        String Personal_Statement = "";
+        boolean Have_Funding = false;
+        String Club = "";
+        String Extracurriculars = "";
+        String Academic_Achievement = "";
 
         // Set date format
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
+        //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
 
         // Read file
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -88,7 +88,7 @@ public class ApplicantLoader {
                         break;
 
                     case "Expected_Graduation_Date":
-                        Expected_Graduation_Date = dateFormat.parse(parts[1].trim());
+                        Expected_Graduation_Date = parts[1].trim();
                         break;
 
                     case "Already_have_funding":
@@ -119,11 +119,31 @@ public class ApplicantLoader {
             throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
         }
         
+        /*
         // Handle or log ParseException for parsing date
         catch (ParseException e) {
             throw new ParseException("Failed to parse date values in the file: " + filePath, 0);
         }
+        */
 
-        return new StudentProfile(Name, Gender, GPA, Year_of_Study, Major, Minor, Transfer_Student, Student_ID, Email, units_enrolled, Citizenship, Expected_Graduation_Date, Personal_Statement, Have_Funding, Club, Extracurriculars, Academic_Achievement);
+        Applicant applicant = new Applicant(Name, Gender, GPA, Year_of_Study, Major, Transfer_Student, Student_ID, Email, Citizenship, Expected_Graduation_Date);
+        applicant.setUnits_enrolled(units_enrolled);
+        applicant.setPersonal_Statement(Personal_Statement);
+        applicant.setHave_Funding(Have_Funding);
+
+        if (!Minor.equals("-")) {
+            applicant.setMinor(Minor);
+        }
+        if (!Club.equals("-")) {
+            applicant.setClub(Club);
+        }
+        if (!Extracurriculars.equals("-")) {
+            applicant.setExtracurriculars(Extracurriculars);
+        }
+        if (!Academic_Achievement.equals("-")) {
+            applicant.setAcademic_Achievement(Academic_Achievement);
+        }
+        
+        return applicant;
     }
 }
