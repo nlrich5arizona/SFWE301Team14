@@ -9,6 +9,7 @@ public class ScholarshipMatcher {
 
         for (Applicant applicant : applicants) {
             double score = 0;
+            int count = 1;
             Map<String, Double> criteriaWeights = scholarship.getCriteriaWeights();
             
             // GPA Criteria
@@ -27,7 +28,9 @@ public class ScholarshipMatcher {
             }
 
             // Normalize or adjust the score as necessary
-            scores.add(applicant.getName() + ", " + Math.round(score)); // Rounding off the score for simplicity
+            scores.add(count + ". " + applicant.getName() + ", " + Math.round(score)); // Rounding off the score for simplicity
+
+            count++;
         }
 
         return scores;
