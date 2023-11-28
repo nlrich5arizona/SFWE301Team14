@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Map;
 
 public class Scholarship {
     String Name;
@@ -8,8 +9,10 @@ public class Scholarship {
     double Minimum_GPA;
     Date Application_due_date;
     String Require_Essay;
+    Map<String, Double> criteriaWeights; // Key: Criteria Name, Value: Weight
 
-    public Scholarship(String name, int monetary_Amount, int no_of_Recipient, String preferred_Major, double minimum_GPA, Date application_due_date, String require_Essay) {
+
+    public Scholarship(String name, int monetary_Amount, int no_of_Recipient, String preferred_Major, double minimum_GPA, Date application_due_date, String require_Essay Map<String, Double> criteriaWeights) {
         Name = name;
         Monetary_Amount = monetary_Amount;
         No_of_Recipient = no_of_Recipient;
@@ -17,6 +20,8 @@ public class Scholarship {
         Minimum_GPA = minimum_GPA;
         Application_due_date = application_due_date;
         Require_Essay = require_Essay;
+        this.criteriaWeights = criteriaWeights;
+        
     }
 
     public String getName() {
@@ -73,5 +78,13 @@ public class Scholarship {
 
     public void setRequire_Essay(String require_Essay) {
         Require_Essay = require_Essay;
+    }
+
+        public Map<String, Double> getCriteriaWeights() {
+        return criteriaWeights;
+    }
+
+    public void setCriteriaWeights(Map<String, Double> criteriaWeights) {
+        this.criteriaWeights = criteriaWeights;
     }
 }
