@@ -1,7 +1,7 @@
 Name: James Chen
 Gender: Male
 GPA: 3.8
-Year_of_Study: Junior
+Year_of_Study: 3
 Major: Public Health
 Minor: -
 Transfer_Student: Yes

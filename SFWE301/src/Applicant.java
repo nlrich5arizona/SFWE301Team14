@@ -1,4 +1,4 @@
-import java.util.Date;
+//import java.util.Date;
 
 public class Applicant {
     String Name;
@@ -19,6 +19,8 @@ public class Applicant {
     String Extracurriculars;
     String Academic_Achievement;
     String Essay_Responses;
+    boolean HasNotification;
+    Notification Notification;
 
     public Applicant(String name, String gender, double GPA, int year_of_Study, String major, boolean transfer_Student, int student_ID, String email, boolean citizenship, String expected_Graduation_Date) {
         Name = name;
@@ -175,5 +177,21 @@ public class Applicant {
 
     public void setEasy_Responses(String essay_Responses) {
         Essay_Responses = essay_Responses;
+    }
+
+    public boolean getHasNotification() {
+        return HasNotification;
+    }
+
+    public void setHasNotification(boolean hasNotification) {
+        HasNotification = hasNotification;
+    }
+
+    public Notification getNotification() {
+        return Notification;
+    }
+
+    public void setNotification(Notification notification) {
+        Notification = notification;
     }
 }

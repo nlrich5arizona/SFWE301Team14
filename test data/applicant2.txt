@@ -1,7 +1,7 @@
 Name: Jane Johnson
 Gender: Female
 GPA: 4.0
-Year_of_Study: Sophomore
+Year_of_Study: 2
 Major: Business
 Minor: Dance
 Transfer_Student: No

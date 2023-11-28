@@ -1,13 +1,15 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Scanner;
 //import java.text.SimpleDateFormat;
 //import java.util.Date;
 
 public class ApplicantLoader {
 
-    public static Applicant loadApplicantData(String filePath) throws IOException, ParseException  {
+    public Applicant loadApplicantData(String filePath) throws IOException, ParseException  {
         // Applicant fields
         String Name = "";
         String Gender = "";
@@ -31,13 +33,14 @@ public class ApplicantLoader {
         //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
 
         // Read file
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+        try {
+            Scanner scanner = new Scanner(new File(filePath));
             // To hold a line at a time
             String line;
 
             // While line is not empty
-            while ((line = reader.readLine()) != null) {
-                // Keep consistent format (": "), skip lines that don't match
+            while (scanner.hasNextLine()) {
+                line = scanner.nextLine();
                 String[] parts = line.split(": ");
                 if (parts.length < 2) continue;
 
@@ -112,6 +115,8 @@ public class ApplicantLoader {
                         break;
                 }
             }
+
+            scanner.close();
         } 
         
         // Handle NumberFormatException for parsing integer, double

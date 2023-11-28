@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
@@ -7,10 +8,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 */
+import java.util.Scanner;
 
 public class ScholarshipLoader {
 
-    public static Scholarship loadScholarshipData(String filePath) throws IOException, ParseException {
+    public Scholarship loadScholarshipData(String filePath) throws IOException, ParseException {
         // Scholarship fields
         String Name = "";
         int Monetary_Amount = 0;
@@ -24,13 +26,14 @@ public class ScholarshipLoader {
         //SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d");
 
         // Read file
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+        try {
+            Scanner scanner = new Scanner(new File(filePath));
             // To hold a line at a time
             String line;
 
             // While line is not empty
-            while ((line = reader.readLine()) != null) {
-                // Keep consistent format (": "), skip lines that don't match
+            while (scanner.hasNextLine()) {
+                line = scanner.nextLine();
                 String[] parts = line.split(": ");
                 if (parts.length < 2) continue;
 
@@ -59,12 +62,19 @@ public class ScholarshipLoader {
                         break;
                 }
             }
+
+            scanner.close();
         } 
         
         // Handle NumberFormatException for parsing int, double
         catch (NumberFormatException e) {
-            throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
+            //throw new ParseException("Failed to parse numeric values in the file: " + filePath, 0);
+            System.out.println("Failed to parse numeric values in the file: " + filePath);
         } 
+
+        catch (IOException e) {
+            System.out.println("Error with parsing " + filePath);
+        }
         
         /*
         // Handle ParseException for parsing date

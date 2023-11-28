@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class ScholarshipAwardWriter {
 
-    public static void writeAwardToFile(String scholarshipName, String applicantName, int applicantId, String filePath) {
+    public void writeAwardToFile(String scholarshipName, String applicantName, int applicantId, String filePath) {
 
         // Build output string
         String content = String.format("The %s has been awarded to %s, ID: %d.", scholarshipName, applicantName, applicantId);

@@ -1,7 +1,7 @@
 Name: Olivia Thompson
 Gender: Female
 GPA: 3.0
-Year_of_Study: Senior
+Year_of_Study: 4
 Major: Creative Writing
 Minor: Environmental Studies
 Transfer_Student: No

@@ -47,11 +47,8 @@ public class Notification {
 
     @Override
     public String toString() {
-        return "Notification{" +
-                "Scholarship_name='" + Scholarship_name + '\'' +
-                ", Recipient_name='" + Recipient_name + '\'' +
-                ", action=" + action +
-                '}';
+        return "You, " + Recipient_name + " have been awarded the "
+        + Scholarship_name;
     }
 
     @Override

@@ -1,7 +1,7 @@
 Name: Emily Rodriguez
 Gender: Female
 GPA: 3.5
-Year_of_Study: Freshman
+Year_of_Study: 1
 Major: Aerospace Engineering
 Minor: Spanish Language and Culture
 Transfer_Student: No
